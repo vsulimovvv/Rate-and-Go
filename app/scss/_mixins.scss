@@ -1,0 +1,59 @@
+@mixin breakpointsMaxW($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpointsMinW($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpointsMaxH($bp) {
+  @media (max-height: $bp) and (orientation: landscape) {
+    @content;
+  }
+}
+
+
+//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
+
+@mixin afterIcon($image, $w, $h) {
+  background-image: $image;
+  width: $w;
+  height: $h;
+}
+
+@mixin background() {
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+@mixin img($size) {
+  width: 100%;
+  height: 100%;
+  object-fit: $size;
+}
+
+@mixin backgroundImage($image, $size) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: center;
+    size: $size;
+  }
+}
+
+@mixin maskImage($image, $size) {
+  mask: $image no-repeat center/$size;
+}
+
+@mixin pseudoElDefault() {
+  position: absolute;
+  content: '';
+}
+

@@ -1,0 +1,10 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+@import './components/header.scss';
+@import './components/footer';
