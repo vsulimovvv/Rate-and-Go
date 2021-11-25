@@ -1,0 +1,29 @@
+.consultation {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding-top: 94px;
+  padding-bottom: 105px;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(40px + (94 - 40) * ((100vw - 320px) / (1215 - 320)));
+    padding-bottom: calc(40px + (105 - 40) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__offer {
+    height: auto;
+    max-width: 585px;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 26px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(15px + (26 - 15) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__form {
+    min-height: 45px;
+  }
+}

@@ -4,19 +4,7 @@
   position: relative;
   text-align: center;
   color: var(--color-white);
-
-  &__title {
-    font-weight: 600;
-    margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 49px;
-
-    @include breakpointsMaxW($bp-container) {
-      font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1225 - 320)));
-      line-height: calc(30px + (49 - 30) * ((100vw - 320px) / (1225 - 320)));
-    }
-  }
-
+  background-color: var(--color-white);
   @include backgroundImage(url('../images/content/promo/1.jpg'), cover);
 
   &::after {
@@ -29,8 +17,59 @@
     z-index: -1;
   }
 
+  &--with-text {
+    .promo__offer {
+      min-height: 505px;
+
+      @include breakpointsMaxW($bp-container) {
+        min-height: calc(400px + (505 - 300) * ((100vw - 320px) / (1215 - 320)));
+      }
+    }
+  }
+
+  &--no-bg {
+    background-image: none;
+    color: var(--color-dark);
+
+    &::after {
+      display: none;
+    }
+
+    .promo__offer {
+      max-width: 840px;
+    }
+
+    .promo__title {
+      max-width: 100%;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 51px;
+
+      @include breakpointsMaxW($bp-container) {
+        font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1225 - 320)));
+        line-height: calc(30px + (36 - 30) * ((100vw - 320px) / (1225 - 320)));
+        margin-bottom: calc(25px + (51 - 25) * ((100vw - 320px) / (1225 - 320)));
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 49px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1225 - 320)));
+      line-height: calc(30px + (49 - 30) * ((100vw - 320px) / (1225 - 320)));
+      margin-bottom: calc(25px + (40 - 25) * ((100vw - 320px) / (1225 - 320)));
+    }
+  }
+
+
+
   &__offer {
-    height: 405px;
+    min-height: 405px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -39,9 +78,24 @@
 
     max-width: 650px;
     margin: 0 auto;
+
+    @include breakpointsMaxW($bp-container) {
+      min-height: calc(300px + (405 - 300) * ((100vw - 320px) / (1215 - 320)));
+    }
   }
 
   &__btn {
     max-width: 258px;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(30px + (55 - 30) * ((100vw - 320px) / (1215 - 320)));
+    }
+
+    // font-size: 18px;
+    // line-height: 24px;
   }
 }

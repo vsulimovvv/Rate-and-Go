@@ -1,15 +1,16 @@
-.work-process {
-  margin-bottom: 125px;
+.advantages {
+  margin-bottom: 120px;
 
   @include breakpointsMaxW($bp-container) {
-    margin-bottom: calc(50px + (125 - 50) * ((100vw - 320px) / (1215 - 320)));
+    margin-bottom: calc(50px + (120 - 50) * ((100vw - 320px) / (1215 - 320)));
   }
 
   &__title {
-    margin-bottom: 84px;
+    margin-bottom: 64px;
+    max-width: 437px;
 
     @include breakpointsMaxW($bp-container) {
-      margin-bottom: calc(30px + (84 - 30) * ((100vw - 320px) / (1215 - 320)));
+      margin-bottom: calc(30px + (64 - 30) * ((100vw - 320px) / (1215 - 320)));
     }
   }
 
@@ -26,6 +27,4 @@
       grid-template-columns: 1fr;
     }
   }
-
-  &__item {}
 }
