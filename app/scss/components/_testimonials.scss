@@ -1,0 +1,58 @@
+.testimonials {
+  margin-bottom: 130px;
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (130 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__title {
+    margin-bottom: 78px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(30px + (78 - 30) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__wrapper {
+    max-width: 1105px;
+  }
+
+  &__slider {}
+}
+
+.slider {
+  margin-bottom: 0px;
+  padding-top: 20px;
+  height: 350px;
+
+  @include breakpointsMaxW($bp-991) {
+    .swiper-slide {
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    height: 320px;
+  }
+
+  .swiper-wrapper {
+    height: 250px;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+    }
+  }
+
+}
+
+.slider-buttons {
+  padding-left: 8px;
+
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
+}

@@ -1,0 +1,79 @@
+.goods-card {
+  max-width: 380px;
+  height: 265px;
+  padding: 41px 21px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpointsMaxW($bp-container) {
+    height: calc(200px + (265 - 200) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  @include backgroundImage(url('../images/content/services/1.jpg'), cover);
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .goods-card__name {
+      transform: translateY(-50px);
+    }
+
+    .goods-card__btn {
+      bottom: 30px;
+    }
+  }
+
+  &::after {
+    @include pseudoElDefault();
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 15, 45, 0.35);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 250ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__name {
+    display: block;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    max-width: 322px;
+    transition: 250ms ease;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    bottom: -100px;
+    transition: 250ms ease;
+
+    background-color: var(--color-white);
+    color: var(--color-dark);
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+  }
+}

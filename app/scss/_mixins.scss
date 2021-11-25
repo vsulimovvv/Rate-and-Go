@@ -17,7 +17,7 @@
 }
 
 
-//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
+//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1215 - 320)));
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;
@@ -57,3 +57,18 @@
   content: '';
 }
 
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}

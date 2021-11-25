@@ -1,0 +1,50 @@
+.task-card {
+  color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 31px;
+  padding-top: 64px;
+  position: relative;
+  max-width: 315px;
+  height: 100%;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-bottom: calc(20px + (31 - 20) * ((100vw - 320px) / (1215 - 320)));
+    padding-top: calc(40px + (64 - 40) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &::after {
+    @include pseudoElDefault();
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    bottom: 0;
+    left: 0;
+  }
+
+  &:before {
+    @include pseudoElDefault();
+    width: 60px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    @include maskImage(url('../images/sprite.svg#task-1'), contain);
+    background-color: var(--color-dark);
+
+    @include breakpointsMaxW($bp-container) {
+      width: calc(45px + (60 - 45) * ((100vw - 320px) / (1215 - 320)));
+      height: calc(30px + (50 - 30) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__name {
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: var(--color-black);
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(15px + (35 - 15) * ((100vw - 320px) / (1215 - 320)));
+      font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+}

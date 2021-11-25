@@ -1,0 +1,42 @@
+.transport-goods {
+  margin-bottom: 124px;
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (124 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(20px + (48 - 20) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1215 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 100%;
+    height: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+    }
+  }
+}

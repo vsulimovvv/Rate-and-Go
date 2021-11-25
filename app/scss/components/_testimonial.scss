@@ -1,0 +1,38 @@
+.testimonial {
+  max-width: 500px;
+  background-color: #F9F9F9;
+  padding: 61px 20px 58px 33px;
+  position: relative;
+
+
+  @include breakpointsMaxW($bp-768) {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  &::before {
+    @include pseudoElDefault();
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    right: 10px;
+    @include maskImage(url('../images/sprite.svg#quote'), contain);
+    background-color: var(--color-accent);
+    z-index: 5;
+
+    @include breakpointsMaxW($bp-container) {
+      width: calc(50px + (100 - 50) * ((100vw - 320px) / (1215 - 320)));
+      height: calc(50px + (100 - 50) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+    width: 156px;
+    height: 17px;
+
+    img {
+      @include img(contain)
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.tasks {
+  margin-bottom: 118px;
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (118 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__title {
+    max-width: 300px;
+    margin-bottom: 115px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(30px + (115 - 30) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 93px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(30px + (93 - 30) * ((100vw - 320px) / (1215 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+      max-width: 315px;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      justify-self: start;
+    }
+  }
+}

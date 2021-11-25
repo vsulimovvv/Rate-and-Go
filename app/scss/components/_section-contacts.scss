@@ -1,0 +1,126 @@
+.contacts {
+  margin-bottom: 120px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (120 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__title {
+    margin-bottom: 54px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(24px + (54 - 24) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 505px) 1fr;
+    gap: 95px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 50px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__preview {
+    max-width: 505px;
+    height: 450px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(200px + (450 - 200) * ((100vw - 320px) / (1215 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+    }
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__offer {
+    max-width: 100%;
+  }
+
+  &__cols {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 240px) minmax(auto, 280px);
+    gap: 60px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__name {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: block;
+    padding-left: 27px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      @include pseudoElDefault();
+      left: 0;
+      top: 0;
+    }
+
+    &--location {
+      &::after {
+        width: 11px;
+        height: 15px;
+        @include maskImage(url('../images/sprite.svg#location'), cover);
+        background-color: var(--color-dark);
+      }
+    }
+
+    &--mail {
+      &::after {
+        width: 16px;
+        height: 11px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include maskImage(url('../images/sprite.svg#mail'), cover);
+        background-color: var(--color-dark);
+      }
+    }
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @include breakpointsMaxW($bp-container) {
+        margin-bottom: calc(40px + (100 - 40) * ((100vw - 320px) / (1215 - 320)));
+      }
+    }
+  }
+}

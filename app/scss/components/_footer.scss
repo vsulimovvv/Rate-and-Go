@@ -1,3 +1,39 @@
 .footer {
- 
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  &__wrapper {
+    padding: 49px 0;
+
+    display: grid;
+    grid-template-columns: 114px 1fr 295px;
+    gap: 88px;
+    justify-content: space-between;
+  }
+
+  &__lists {
+    display: flex;
+    gap: 46px;
+  }
+
+  &__logo {
+    width: 114px;
+    height: 46px;
+  }
+
+  .footer__menu {
+    &__list {}
+
+   
+
+    &__link {}
+  }
+}
+
+.footer-menu{
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }

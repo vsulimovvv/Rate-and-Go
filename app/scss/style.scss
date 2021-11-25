@@ -6,5 +6,24 @@
 @import 'global';
 
 @import './animations';
-@import './components/header.scss';
+
+// * Small Components
+@import './components/services-card';
+@import './components/work-pocess-card';
+
+// * ==== Section 
+@import './components/header';
 @import './components/footer';
+@import './components/section-services';
+@import './components/section-about';
+@import './components/work-process';
+@import './components/promo';
+@import './components/partners';
+@import './components/testimonials';
+@import './components/testimonial';
+@import './components/socials';
+@import './components/tasks';
+@import './components/task-card';
+@import './components/transport-goods';
+@import './components/goods-card';
+@import './components/section-contacts';
