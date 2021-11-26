@@ -1,14 +1,64 @@
 .hero {
   background-color: var(--color-dark);
   color: var(--color-white);
-  min-height: 100vh;
+  min-height: 875px;
 
   padding-top: 150px;
   padding-bottom: 72px;
   z-index: 1;
   position: relative;
 
+  margin-bottom: 120px;
   @include backgroundImage(url('../images/content/hero/main.jpg'), cover);
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (120 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+
+  &--avia {
+    min-height: 527px;
+    @include backgroundImage(url('../images/content/hero/avia.jpg'), cover);
+  }
+
+  &--outsourcing {
+    min-height: 564px;
+    @include backgroundImage(url('../images/content/hero/outsourcing.jpg'), cover);
+
+    .hero__wrapper {
+      max-width: 496px;
+    }
+
+    .hero__text {
+      margin-bottom: 35px;
+
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .hero__btn {
+      max-width: 255px;
+    }
+  }
+
+  &--contacts {
+    min-height: 505px;
+    @include backgroundImage(url('../images/content/hero/contacts.jpg'), cover);
+  }
+
+  &--service {
+    min-height: 505px;
+    @include backgroundImage(url('../images/content/hero/service.jpg'), cover);
+  }
 
   &::after {
     @include pseudoElDefault();
