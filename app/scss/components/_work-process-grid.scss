@@ -1,0 +1,30 @@
+.work-process-grid {
+  margin-bottom: 135px;
+  margin-top: 135px;
+
+  @include breakpointsMaxW($bp-container) {
+    margin-bottom: calc(50px + (135 - 50) * ((100vw - 320px) / (1215 - 320)));
+    margin-top: calc(50px + (135 - 50) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 24px;
+
+    // @include breakpointsMaxW($bp-container) {
+    //   gap: calc(20px + (24 - 20) * ((100vw - 320px) / (1215 - 320)));
+    // }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+}

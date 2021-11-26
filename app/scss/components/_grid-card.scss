@@ -1,0 +1,108 @@
+.grid-card {
+  width: 100%;
+  min-height: 485px;
+
+  padding-top: 95px;
+  padding-right: 60px;
+  padding-bottom: 92px;
+  padding-left: 128px;
+
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+  transition: 350ms ease-in;
+  overflow: hidden;
+  z-index: 1;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(30px + (95 - 30) * ((100vw - 320px) / (1215 - 320)));
+    padding-right: calc(30px + (60 - 30) * ((100vw - 320px) / (1215 - 320)));
+    padding-bottom: calc(30px + (92 - 30) * ((100vw - 320px) / (1215 - 320)));
+    padding-left: calc(30px + (128 - 30) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    min-height: auto;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+
+    .grid-card__btn {
+      transform: scaleX(1);
+    }
+
+    &::after {
+      // display: none;
+    }
+  }
+
+  &::after {
+    @include pseudoElDefault();
+    background-color: var(--color-white);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 100% 100%);
+    transition: 350ms ease-in;
+    opacity: 0;
+  }
+
+  &:hover {
+    color: var(--color-dark);
+
+    .grid-card__btn {
+      transform: scaleX(1);
+      transition-delay: 0;
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+
+      clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 45px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1215 - 320)));
+      line-height: calc(26px + (36 - 26) * ((100vw - 320px) / (1215 - 320)));
+      margin-bottom: calc(20px + (45 - 20) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__text {
+    margin-bottom: 18px;
+    font-size: 16px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(15px + (18 - 15) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__number {
+    display: none;
+    position: absolute;
+  }
+
+  &__btn {
+    transition: 350ms ease;
+    transition-delay: 350ms;
+    transform: scaleX(0);
+    transform-origin: left;
+    max-width: 258px;
+  }
+}

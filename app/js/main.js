@@ -25,6 +25,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
   });
 
+  const showMenu = () => {
+    const menuBtn = document.querySelector('.header__toggle');
+    const menu = document.querySelector('.main-menu');
+    const body = document.querySelector('body');
+
+    menuBtn.addEventListener('click', e => {
+      menu.classList.toggle('active');
+      menuBtn.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+    });
+  };
+  showMenu();
+
+  function line() {
+    const navLine = document.querySelector('.route__truck');
+    const navItem = document.querySelectorAll('.road__item');
+
+    navItem.forEach((el) => {
+      el.addEventListener('mouseenter', (e) => {
+        let target = e.currentTarget;
+        navLine.style.left = `${target.offsetLeft + 30}px`;
+      });
+    });
+
+    navItem.forEach((el) => {
+      el.addEventListener('mouseleave', (e) => {
+        navLine.style.left = `-90px`;
+      });
+    });
+  };
+
+  line();
+
 
 
   // var swiper = new Swiper(".hero__preview", {

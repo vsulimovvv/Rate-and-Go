@@ -1,3 +1,139 @@
 .header {
-  
+  color: var(--color-white);
+  padding: 27px 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  z-index: 10;
+
+  width: 100%;
+  position: fixed;
+
+  &__top {
+    // z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 33px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__signin {
+    display: block;
+    padding-left: 22px;
+    position: relative;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 18px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include maskImage(url('../images/sprite.svg#user'), contain);
+      background-color: var(--color-white);
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      width: 100%;
+
+    }
+  }
+
+
+  // * ==== Toglge Menu Btn
+  &__toggle {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+      z-index: 10;
+      flex-shrink: 0;
+      width: 25px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 350ms ease-in;
+
+      &-line {
+        border-radius: 2px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-accent);
+        position: relative;
+        transition: 150ms ease-in;
+
+        &::after,
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: var(--color-accent);
+          transition: 450ms ease-in;
+          border-radius: 2px;
+        }
+
+        &::after {
+          top: -8px;
+        }
+
+        &::before {
+          bottom: -8px;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        // transform: rotate(15deg);
+      }
+
+      &.active {
+        transform: rotate(-180deg);
+
+        span {
+          background-color: transparent;
+
+          &::after {
+            transform: translateX(-50%) rotate(45deg);
+            top: 0px;
+          }
+
+          &::before {
+            bottom: 0px;
+            transform: translateX(-50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(-45deg);
+  }
 }

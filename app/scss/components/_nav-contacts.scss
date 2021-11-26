@@ -1,0 +1,60 @@
+.nav-contacts {
+  font-size: 12px;
+  line-height: 15px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 5px;
+    }
+  }
+
+  &__item {}
+
+  &__link {
+    display: block;
+    padding-left: 22px;
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      span {
+        display: none;
+      }
+    }
+
+    &::after {
+      @include pseudoElDefault();
+      width: 16px;
+      height: 12px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--phone {
+      &::after {
+        @include maskImage(url('../images/sprite.svg#phone-icon'), contain);
+        background-color: var(--color-white);
+      }
+    }
+
+    &--mail {
+      &::after {
+        @include maskImage(url('../images/sprite.svg#mail'), contain);
+        background-color: var(--color-white);
+      }
+    }
+
+    &--address {
+      &::after {
+        @include maskImage(url('../images/sprite.svg#location'), contain);
+        background-color: var(--color-white);
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,101 @@
+.road {
+  color: var(--color-white);
+  margin-bottom: 30px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  &__item {
+    max-width: 320px;
+    width: 100%;
+
+    &:hover {
+      .road__point {
+        background-color: var(--color-accent);
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+
+      .road__info {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__info {
+    opacity: 0.6;
+    transition: 500ms ease;
+    margin-bottom: 33px;
+  }
+
+  &__price {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__spec {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__points {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__point {
+    background-color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: 400ms ease;
+    z-index: 1;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 3px;
+      height: 3px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-accent);
+      transition: 400ms ease;
+      z-index: -1;
+    }
+  }
+}
+
+.route {
+  width: 100%;
+  background-image: url('../images/icons/line-dashed.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  // border-bottom: 1px dashed #fff;
+  height: 80px;
+  bottom: -30px;
+  position: absolute;
+
+  &__truck {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 20px;
+    background-color: #000;
+    transition: left 400ms ease-in-out, width 400ms ease-in-out;
+
+    @include backgroundImage(url('../images/truck.png'), cover)
+  }
+}
