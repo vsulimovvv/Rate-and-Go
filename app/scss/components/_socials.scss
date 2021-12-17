@@ -1,19 +1,31 @@
 .socials {
-  height: 130px;
-  background-color: #fff;
+  &__text {
+    margin-bottom: 15px;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 81px;
-    height: 100%;
   }
 
-  &__item {}
-
   &__link {
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-color: var(--color-white);
+
+    &--telegram {
+      @include maskImage(url('../images/sprite.svg#telegram'), cover);
+    }
+
+    &--whatsapp {
+      @include maskImage(url('../images/sprite.svg#telegram'), cover);
+    }
+
+    &--facebook {
+      @include maskImage(url('../images/sprite.svg#telegram'), cover);
+    }
   }
 }

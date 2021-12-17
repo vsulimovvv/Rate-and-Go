@@ -23,6 +23,16 @@
     }
   }
 
+  &__contacts {
+    @include breakpointsMaxW($bp-991) {
+      .nav-contacts__link {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;

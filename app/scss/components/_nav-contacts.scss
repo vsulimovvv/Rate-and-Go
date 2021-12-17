@@ -26,16 +26,10 @@
       }
     }
 
-    @include breakpointsMaxW($bp-991) {
-      span {
-        display: none;
-      }
-    }
-
     &::after {
       @include pseudoElDefault();
       width: 16px;
-      height: 12px;
+      height: 16px;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
@@ -51,6 +45,7 @@
 
     &--mail {
       &::after {
+        height: 10px;
         @include maskImage(url('../images/sprite.svg#mail-icon'), cover);
       }
     }
