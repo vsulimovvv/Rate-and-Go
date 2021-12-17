@@ -12,6 +12,8 @@
       &__img {
         &::after {
           transform: scaleX(1);
+          opacity: 1;
+          visibility: visible;
         }
       }
     }
@@ -39,6 +41,14 @@
       transform: scaleX(0);
       transform-origin: left;
       transition: 200ms ease-in;
+      opacity: 0;
+      visibility: hidden;
+
+      @include breakpointsMaxW($bp-991) {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleX(1);
+      }
     }
 
     @include breakpointsMaxW($bp-container) {

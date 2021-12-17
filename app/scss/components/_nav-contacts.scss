@@ -45,19 +45,19 @@
 
     &--phone {
       &::after {
-        @include maskImage(url('../images/icons/phone-icon.svg'), contain);
+        @include maskImage(url('../images/sprite.svg#phone-icon'), cover);
       }
     }
 
     &--mail {
       &::after {
-        @include maskImage(url('../images/icons/mail-icon.svg'), contain);
+        @include maskImage(url('../images/sprite.svg#mail-icon'), cover);
       }
     }
 
     &--address {
       &::after {
-        @include maskImage(url('../images/icons/location-icon.svg'), contain);
+        @include maskImage(url('../images/sprite.svg#location-icon'), cover);
       }
     }
   }

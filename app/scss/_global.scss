@@ -86,22 +86,20 @@ a {
   line-height: 1;
   width: 100%;
   // border: 2px solid var(--color-accent);
-  transition: 150ms ease;
+  transition: 200ms ease;
 
-  // &:focus {
-  //   box-shadow: 0 0 0 3px rgba(0, 0, 0.5);
-  // }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0.5);
+  }
 
-  // &:hover {
-  //   background-color: var(--color-white);
-  //   color: var(--color-dark);
-  //   border-color: var(--color-white);
-  //   transform: translateY(5px) scale(1.05);
-  // }
+  &:hover {
+    transform: scaleX(1.08);
+  }
 
-  // &:active {
-  //   transform: translateY(5px) scale(0.98);
-  // }
+  &:active {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0.5);
+    transform: scale(0.98);
+  }
 }
 
 // * ==== Text Accent

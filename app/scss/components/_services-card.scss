@@ -49,6 +49,11 @@
     transition: 250ms ease;
     opacity: 0;
     visibility: hidden;
+
+    @include breakpointsMaxW($bp-991) {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__badge {
@@ -66,5 +71,17 @@
     transform: translateX(-150%);
     transition: 250ms ease;
     transition-delay: 150ms;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    .service-card {
+      &__title {
+        transform: translateX(0);
+      }
+
+      &__badge {
+        transform: translateX(0);
+      }
+    }
   }
 }
