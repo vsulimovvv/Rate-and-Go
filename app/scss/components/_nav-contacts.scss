@@ -12,12 +12,19 @@
     }
   }
 
-  &__item {}
-
   &__link {
     display: block;
     padding-left: 22px;
     position: relative;
+    transition: 150ms ease-in;
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
 
     @include breakpointsMaxW($bp-991) {
       span {
@@ -32,29 +39,26 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      background-color: var(--color-white);
+      transition: 150ms ease-in;
     }
 
     &--phone {
       &::after {
-        @include maskImage(url('../images/sprite.svg#phone-icon'), contain);
-        background-color: var(--color-white);
+        @include maskImage(url('../images/icons/phone-icon.svg'), contain);
       }
     }
 
     &--mail {
       &::after {
-        @include maskImage(url('../images/sprite.svg#mail'), contain);
-        background-color: var(--color-white);
+        @include maskImage(url('../images/icons/mail-icon.svg'), contain);
       }
     }
 
     &--address {
       &::after {
-        @include maskImage(url('../images/sprite.svg#location'), contain);
-        background-color: var(--color-white);
+        @include maskImage(url('../images/icons/location-icon.svg'), contain);
       }
     }
-
-
   }
 }

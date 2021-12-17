@@ -2,10 +2,18 @@
   color: var(--color-white);
   margin-bottom: 30px;
 
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
@@ -83,6 +91,10 @@
   height: 80px;
   bottom: -30px;
   position: absolute;
+
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
 
   &__truck {
     display: block;

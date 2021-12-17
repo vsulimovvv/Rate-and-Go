@@ -1,0 +1,103 @@
+.select2 {
+  width: 75px !important;
+  color: var(--color-white) !important;
+}
+
+.select2-search {
+  display: none;
+}
+
+.select2-selection__rendered {
+  color: var(--color-white) !important;
+}
+
+.select2-selection {
+  position: relative;
+  padding-left: 38px;
+  width: 100%;
+  display: block;
+
+  &::after {
+    @include pseudoElDefault();
+    width: 29px;
+    height: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include maskImage(url('../images/sprite.svg#select-icon'), cover);
+    background-color: var(--color-white);
+  }
+}
+
+.select2-container .select2-selection--single {
+  background-color: transparent;
+  border: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+  background-color: transparent;
+}
+
+.select2-results {
+  padding: 0;
+  background-color: transparent;
+}
+
+.select2-dropdown {
+  padding: 0;
+  border: none;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+}
+
+.select2-results__options {
+  width: 100%;
+}
+
+.select2-results__option {
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.19em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .select2-results__option--selectable {
+    background-color: var(--color-accent);
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 10px;
+
+  b {
+    border-color: var(--color-white) transparent transparent transparent;
+  }
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent var(--color-white) transparent;
+}
+
+.select2-results__option .select2-results__option--selectable .select2-results__option--highlighted {
+  background-color: var(--color-accent);
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--color-accent);
+}

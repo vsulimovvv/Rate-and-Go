@@ -1,7 +1,8 @@
 .hero {
   background-color: var(--color-dark);
   color: var(--color-white);
-  min-height: 875px;
+  // min-height: 875px;
+  height: 100vh;
 
   padding-top: 150px;
   padding-bottom: 72px;
@@ -14,7 +15,6 @@
   @include breakpointsMaxW($bp-container) {
     margin-bottom: calc(50px + (120 - 50) * ((100vw - 320px) / (1215 - 320)));
   }
-
 
   &--avia {
     min-height: 527px;
@@ -78,7 +78,7 @@
   &__title {
     font-size: 40px;
     line-height: 56px;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
 
     @include breakpointsMaxW($bp-container) {
       font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1215 - 320)));
@@ -87,8 +87,8 @@
   }
 
   &__wrapper {
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 78px;
+    padding-bottom: 105px;
 
     @include breakpointsMaxW($bp-container) {
       padding-top: calc(30px + (80 - 30) * ((100vw - 320px) / (1215 - 320)));
@@ -97,7 +97,7 @@
   }
 
   &__form {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 
     @include breakpointsMaxW($bp-768) {}
   }
@@ -106,5 +106,9 @@
     border-top: 1px solid var(--color-white);
     padding-top: 35px;
     position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
   }
 }

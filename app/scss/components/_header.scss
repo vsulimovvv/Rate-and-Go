@@ -8,18 +8,28 @@
 
   width: 100%;
   position: fixed;
+  transition: 150ms ease-in;
 
-  // &.active {
-  //   background-color: var(--color-dark);
-  // }
+  @include breakpointsMaxW($bp-container) {
+    padding-bottom: calc(14px + (27 - 14) * ((100vw - 320px) / (1215 - 320)));
+    padding-top: calc(14px + (27 - 14) * ((100vw - 320px) / (1215 - 320)));
+  }
+
+  &.scroll-header {
+    background-color: var(--color-dark);
+
+    .header__top {
+      display: none;
+    }
+  }
 
   &__top {
-    // z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
 
-    margin-bottom: 33px;
+    margin-bottom: 23px;
   }
 
   &__bottom {
@@ -40,16 +50,22 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      @include maskImage(url('../images/sprite.svg#user'), contain);
+      @include maskImage(url('../images/icons/user.svg'), contain);
       background-color: var(--color-white);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
     }
 
     @include breakpointsMaxW($bp-991) {
       width: 100%;
-
     }
   }
-
 
   // * ==== Toglge Menu Btn
   &__toggle {
