@@ -12,10 +12,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 48px 24px;
 
-    // @include breakpointsMaxW($bp-container) {
-    //   gap: calc(20px + (24 - 20) * ((100vw - 320px) / (1215 - 320)));
-    // }
-
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: 1fr;
 

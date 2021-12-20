@@ -1,32 +1,57 @@
 window.addEventListener('DOMContentLoaded', () => {
-  var swiper = new Swiper(".swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  // * ==== Select Init
+  $('.select').select2();
 
-    breakpoints: {
-      315: {
-        spaceBetween: 50,
-        slidesPerView: 1,
+  // * ==== Change Backround Color if refreshed page
+  (function () {
+    const header = document.querySelector('header');
+    if (window.pageYOffset >= 10) {
+      header.classList.add('scroll-header');
+    }
+  })();
+
+  //* ==== Change Background Header
+  function scrollHeader() {
+    const header = document.querySelector('header');
+    if (this.scrollY >= 10) {
+      header.classList.add('scroll-header');
+    } else {
+      header.classList.remove('scroll-header');
+    }
+  };
+
+  // * ==== Slider Clients
+  (function sliderClients() {
+    const sldier = new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 50,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      1150: {
-        slidesPerView: 2,
-        spaceBetween: 100,
-      }
-    },
 
-  });
+      breakpoints: {
+        315: {
+          spaceBetween: 50,
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        1150: {
+          slidesPerView: 2,
+          spaceBetween: 100,
+        }
+      },
 
-  const showMenu = () => {
+    });
+  })();
+
+  // * ==== Show menu
+  (function showMenu() {
     const menuBtn = document.querySelector('.header__toggle');
     const menu = document.querySelector('.main-menu');
     const body = document.querySelector('body');
@@ -36,10 +61,10 @@ window.addEventListener('DOMContentLoaded', () => {
       menuBtn.classList.toggle('active');
       body.classList.toggle('no-scroll');
     });
-  };
-  showMenu();
+  })();
 
-  function line() {
+  // * ==== Road Hero
+  (function line() {
     const navLine = document.querySelector('.route__truck');
     const navItem = document.querySelectorAll('.road__item');
 
@@ -55,22 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
         navLine.style.left = `-90px`;
       });
     });
-  };
-
-  line();
-
-  $('.select').select2();
-
-  //* ==== Change Background Header
-  function scrollHeader() {
-    const nav = document.querySelector('header');
-
-    if (this.scrollY >= 10) {
-      nav.classList.add('scroll-header');
-    } else {
-      nav.classList.remove('scroll-header');
-    }
-  }
+  })()
 
   window.addEventListener('scroll', scrollHeader);
 });

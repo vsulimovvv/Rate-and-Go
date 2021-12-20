@@ -1,6 +1,7 @@
 .grid-card {
   width: 100%;
   min-height: 485px;
+  height: 100%;
 
   padding-top: 95px;
   padding-right: 60px;
@@ -37,10 +38,6 @@
 
     .grid-card__btn {
       transform: scaleX(1);
-    }
-
-    &::after {
-      // display: none;
     }
   }
 
@@ -104,5 +101,7 @@
     transform: scaleX(0);
     transform-origin: left;
     max-width: 258px;
+
+
   }
 }
