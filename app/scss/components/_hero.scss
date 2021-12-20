@@ -21,11 +21,12 @@
   }
 
   &--outsourcing {
-    min-height: 564px;
+    min-height: 533px;
+    height: 100%;
     @include backgroundImage(url('../images/content/hero/outsourcing.jpg'), cover);
 
     .hero__wrapper {
-      max-width: 496px;
+      width: 100%;
     }
 
     .hero__text {
@@ -37,25 +38,33 @@
         line-height: 24px;
 
         &:not(:last-child) {
+          font-weight: 400;
           margin-bottom: 30px;
           font-size: 16px;
           line-height: 24px;
+          max-width: 440px;
         }
       }
     }
 
     .hero__btn {
       max-width: 255px;
+
+      @include breakpointsMaxW($bp-768) {
+        margin: 0 auto;
+      }
     }
   }
 
   &--contacts {
     min-height: 505px;
+    height: 100%;
     @include backgroundImage(url('../images/content/hero/contacts.jpg'), cover);
   }
 
   &--service {
     min-height: 505px;
+    height: 100%;
     @include backgroundImage(url('../images/content/hero/service.jpg'), cover);
   }
 
@@ -78,6 +87,7 @@
     font-size: 40px;
     line-height: 56px;
     margin-bottom: 30px;
+    font-weight: 800;
 
     @include breakpointsMaxW($bp-container) {
       font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1215 - 320)));

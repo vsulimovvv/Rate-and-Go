@@ -47,6 +47,114 @@
     }
   }
 
+  &--agency {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/1.svg'), contain);
+    }
+  }
+
+  &--transportation {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/2.svg'), contain);
+    }
+  }
+
+  &--customs {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/3.svg'), contain);
+    }
+  }
+
+  &--certification {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/4.svg'), contain);
+    }
+  }
+
+  &--agreement {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/5.svg'), contain);
+    }
+  }
+
+  &--documentation {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/6.svg'), contain);
+    }
+  }
+
+  &--warehouse {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/7.svg'), contain);
+    }
+  }
+
+  &--help {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/8.svg'), contain);
+    }
+  }
+
+  &--reporting {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing/9.svg'), contain);
+    }
+  }
+
+  &--without-intermediaries {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/1.svg'), contain);
+    }
+  }
+
+  &--transparency {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/2.svg'), contain);
+    }
+  }
+
+  &--cost-calculator {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/3.svg'), contain);
+    }
+  }
+
+  &--actual-prices {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/4.svg'), contain);
+    }
+  }
+
+  &--clock-control {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/5.svg'), contain);
+    }
+  }
+
+  &--responsibility {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/6.svg'), contain);
+    }
+  }
+
+  &--better-conditions {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/7.svg'), contain);
+    }
+  }
+
+  &--work-for-results {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/8.svg'), contain);
+    }
+  }
+
+  &--help-from-specialists {
+    &::before {
+      @include maskImage(url('../images/content/tasks-outsourcing-2/9.svg'), contain);
+    }
+  }
+
   &:before {
     @include pseudoElDefault();
     width: 60px;
