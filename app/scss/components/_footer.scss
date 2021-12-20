@@ -11,7 +11,7 @@
 
     @include breakpointsMaxW($bp-991) {
       flex-direction: column;
-      gap: calc(30px + (88 - 30) * ((100vw - 320px) / (1215 - 320)));
+      gap: calc(40px + (88 - 40) * ((100vw - 320px) / (1215 - 320)));
     }
   }
 
@@ -51,11 +51,17 @@
   &__contacts {
     margin-bottom: 65px;
 
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(40px + (65 - 40) * ((100vw - 320px) / (1215 - 320)));
+    }
+
     @include breakpointsMaxW($bp-991) {
       max-width: 100%;
     }
 
     .nav-contacts {
+
+      // margin-bottom: 0;
       &__list {
         flex-direction: column;
         align-items: flex-start;

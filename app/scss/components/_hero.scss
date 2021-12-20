@@ -1,15 +1,13 @@
 .hero {
   background-color: var(--color-dark);
   color: var(--color-white);
-  // min-height: 875px;
   height: 100vh;
 
   padding-top: 150px;
   padding-bottom: 72px;
   z-index: 1;
   position: relative;
-
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   @include backgroundImage(url('../images/content/hero/main.jpg'), cover);
 
   @include breakpointsMaxW($bp-container) {
@@ -18,6 +16,7 @@
 
   &--avia {
     min-height: 527px;
+    height: 100%;
     @include backgroundImage(url('../images/content/hero/avia.jpg'), cover);
   }
 

@@ -1,0 +1,48 @@
+.about-service {
+  margin-bottom: 98px;
+
+  &__wrapper {
+    max-width: 980px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 320px) 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(20px + (60 - 20) * ((100vw - 320px) / (1215 - 320)));
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    .text-accent {
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .text-bold {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include breakpointsMaxW($bp-container) {
+          margin-bottom: calc(15px + (30 - 15) * ((100vw - 320px) / (1215 - 320)));
+        }
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 250px;
+  }
+}

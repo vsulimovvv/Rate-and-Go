@@ -85,8 +85,11 @@ a {
   font-size: 14px;
   line-height: 1;
   width: 100%;
-  // border: 2px solid var(--color-accent);
   transition: 200ms ease;
+
+  &:hover {
+    background-color: #bb2a34
+  }
 
   &:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0.5);
