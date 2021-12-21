@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- jQueryFormStyler -->
+ <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Rate and Go - Контакты</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="header">
+  <div class="container">
+    <nav class="header__nav main-nav">
+      <div class="header__top">
+        <div class="header__contacts nav-contacts">
+          <ul class="nav-contacts__list">
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--phone"
+                href="tel:380444924020"><span>+380-44-492-4020</span></a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--mail"
+                href="mailto:info@rate-and-go.com"><span>info@rate-and-go.com</span></a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--address" href="#"><span>ул. Десятинная 1/3,
+                  Киев</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__select ">
+          <select class="select" name="select">
+            <option value="RU">RU</option>
+            <option value="EN">EN</option>
+            <option value="US">US</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <a class="header__logo logo" href="#">
+          <img src="images/logo.svg" alt="Логотип">
+        </a>
+
+        <div class="header__menu main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Калькулятор</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Услуги</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">О компании</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <div>
+            <a class="main-menu__signin" href="#">Войти</a>
+          </div>
+        </div>
+
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+    <main class="main">
+      <section class="hero hero--contacts">
+  <div class="container">
+    <div class="hero__wrapper">
+      <h1 class="hero__title">Контакты</h1>
+    </div>
+  </div>
+</section>
+      <section class="contacts">
+  <div class="container">
+    <h2 class="contacts__title visually-hidden">Наш офис</h2>
+
+    <div class="contacts__wrapper">
+      <div class="contacts__preview">
+        <img src="images/content/about/1.jpg" alt="Наш офис">
+      </div>
+
+      <div class="contacts__offer">
+        <div class="contacts__box">
+          <h3 class="contacts__title">Главный офис</h3>
+          <a class="contacts__link contacts__link--location" href="#">360 W 31st St #5, New York, NY 10001, United
+            States</a>
+          <a class="contacts__link contacts__link--mail" href="mailto:info@rate-and-go.com">info@rate-and-go.com</a>
+        </div>
+
+        <div class="contacts__box">
+          <h3 class="contacts__title">Представительства <span class="text-accent">RateGo</span> в Европе</h3>
+          <div class="contacts__cols">
+            <div class="contacts__col">
+              <p class="contacts__name"><span class="text-accent">RateGo</span>-Украина</p>
+
+              <address>
+                <a class="contacts__link contacts__link--location" href="#">ул. Мечникова, 16, офис 4-8,
+                  г. Киев, Украина, 01021
+                  eu@rate-and-go.com
+                  +380-67-641-20-40</a>
+              </address>
+            </div>
+            <div class="contacts__col">
+              <p class="contacts__name"><span class="text-accent">RateGo</span>-Украина</p>
+
+              <address>
+                <a class="contacts__link contacts__link--location" href="#">БЦ Кулон, ул. 8 Марта, 14, офис 315, Москва,
+                  Россия, 127092
+                  info@rate-and-go.com
+                  +7-926-584-59-84</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="promo">
+  <div class="container">
+    <div class="promo__offer">
+      <h2 class="promo__title section-title">Выполняем грузоперевозки по всему миру</h2>
+
+      <button class="promo__btn btn" type="button">Рассчитать стоимость</button>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <a class="logo" href="#">
+        <img src="images/logo.svg" alt="Логотип">
+      </a>
+
+      <div class="footer__lists footer-menu">
+        <div class="footer-menu__col">
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">О нас</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Схема работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Вакансии</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Калькулятор</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials socials">
+            <p class="socials__text">Связаться с нами:</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--telegram" href="#" aria-label="Написать нам в телеграм"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--whatsapp" href="#" aria-label="Написать нам в уатсапп"></a>
+              </li>
+              <li class=" socials__item">
+                <a class="socials__link socials__link--facebook" href="#" aria-label="Написать нам в фэйсбук"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-menu__col">
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Услуги</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Авто</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Море</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Авиа</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Сборный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Мультимодальный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Негабаритный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Экспедирование</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Таможня</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Склад</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Аутсорсинг</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__contacts nav-contacts">
+          <h3 class="nav-contacts__title">Главный офис</h3>
+          <ul class="nav-contacts__list">
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--address" href="#"><span>ул. Десятинная 1/3, Киев 01001
+                  Украина</span>
+              </a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--mail"
+                href="mailto:info@rate-and-go.com"><span>info@rate-and-go.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__question-box question-box">
+          <h3 class="question-box__title">Остались вопросы?</h3>
+          <div class="question-box__text">
+            Оставьте свои контакты, и мы свяжемся с вами в ближайшее время!
+          </div>
+          <button class="question-box__btn btn" type="button">Связаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container flex">
+      <div class="footer__text">
+        <p>© 2021 RateGO / All rights reserved</p>
+      </div>
+      <div class="footer__tools">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- select2 -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

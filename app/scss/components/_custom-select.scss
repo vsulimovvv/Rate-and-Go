@@ -8,6 +8,7 @@
 .select2 {
   width: 75px !important;
   color: var(--color-white) !important;
+  z-index: 1 !important;
 
   &:focus {
     // ! AAAAAAAAAAAAAAAAAAAAAAAA

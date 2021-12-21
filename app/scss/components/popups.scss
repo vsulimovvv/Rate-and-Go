@@ -1,0 +1,123 @@
+.popup {
+  z-index: 110;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  // background-color: rgba(3, 15, 45, 0.35);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 350ms ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrap {
+  }
+
+
+  &__container {
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .form__group {
+      max-width: 100%;
+    }
+
+    .form__input {
+      width: 100%;
+    }
+  }
+}
+
+.card {
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 450px;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transform: translate(-50%, -50%);
+  transition: all .3s .1s ease-out;
+  border-radius: 12px;
+
+  .btn-back {
+    margin-top: 10px;
+    color: var(--color-white);
+    text-transform: lowercase;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &--welcome {
+    background-color: var(--color-white);
+
+    .btn-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &--login {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+
+    .form {
+      &__btn {
+        background-color: var(--color-dark);
+      }
+    }
+  }
+
+  &--register {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+  }
+
+  &:not(.is-show) {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotateX(95deg);
+  }
+
+  &.is-show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+}

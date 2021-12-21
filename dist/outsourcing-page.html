@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- jQueryFormStyler -->
+ <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Rate abd Go - Аутсорсинг</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="header">
+  <div class="container">
+    <nav class="header__nav main-nav">
+      <div class="header__top">
+        <div class="header__contacts nav-contacts">
+          <ul class="nav-contacts__list">
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--phone"
+                href="tel:380444924020"><span>+380-44-492-4020</span></a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--mail"
+                href="mailto:info@rate-and-go.com"><span>info@rate-and-go.com</span></a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--address" href="#"><span>ул. Десятинная 1/3,
+                  Киев</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__select ">
+          <select class="select" name="select">
+            <option value="RU">RU</option>
+            <option value="EN">EN</option>
+            <option value="US">US</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <a class="header__logo logo" href="#">
+          <img src="images/logo.svg" alt="Логотип">
+        </a>
+
+        <div class="header__menu main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Калькулятор</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Услуги</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">О компании</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <div>
+            <a class="main-menu__signin" href="#">Войти</a>
+          </div>
+        </div>
+
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+    <main class="main">
+      <section class="hero hero--outsourcing">
+  <div class="container">
+    <div class="hero__wrapper">
+      <h1 class="hero__title">Аутсорсинг</h1>
+
+      <div class="hero__text">
+        <p>
+          Логистика без посредников. Агентируем транспорт по прямым договорам с перевозчиками.
+        </p>
+        <p>RateGo Logistics - агент по перевозкам ваших грузов!</p>
+      </div>
+
+      <button class="hero__btn btn" type="button">Получить консультацию</button>
+    </div>
+  </div>
+</section>
+      <section class="tasks">
+  <div class="container">
+    <h2 class="tasks__title">Задачи, которые мы выполняем</h2>
+
+    <ul class="tasks__items">
+      <li class="tasks__item">
+        <article class="task-card task-card--agency">
+          <h3 class="task-card__name">Агентирование транспорта</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--transportation">
+          <h3 class="task-card__name">Контроль перевозки</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--customs">
+          <h3 class="task-card__name">Таможенное оформление</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--certification">
+          <h3 class="task-card__name">Сертифицирование и лицензирование</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--agreement">
+          <h3 class="task-card__name">Согласование условий поставки</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--documentation">
+          <h3 class="task-card__name">Документы для сделки</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--warehouse">
+          <h3 class="task-card__name">Складcие услуги</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--help">
+          <h3 class="task-card__name">Помощь юриста</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--reporting">
+          <h3 class="task-card__name">Отчетность</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="advantages">
+  <div class="container">
+    <h2 class="advantages__title section-title">Причины доверить логистику нам</h2>
+
+    <ul class="advantages__items">
+      <li class="advantages__item ">
+        <div class="work-process-card">
+          <div class="work-process-card__img">
+            <img src="images/content/advantages/1.jpg" alt="Расчет стоимости.">
+          </div>
+          <div class="work-process-card__info">
+            <span class="work-process-card__number">01</span>
+            <div class="work-process-card__text">Мы не посредники - только прямые договора.</div>
+          </div>
+        </div>
+      </li>
+      <li class="advantages__item ">
+        <div class="work-process-card">
+          <div class="work-process-card__img">
+            <img src="images/content/advantages/2.jpg" alt="Расчет стоимости.">
+          </div>
+          <div class="work-process-card__info">
+            <span class="work-process-card__number">02</span>
+            <div class="work-process-card__text">Работаем по фиксированной комиссии.</div>
+          </div>
+        </div>
+      </li>
+      <li class="advantages__item ">
+        <div class="work-process-card">
+          <div class="work-process-card__img">
+            <img src="images/content/advantages/3.jpg" alt="Расчет стоимости.">
+          </div>
+          <div class="work-process-card__info">
+            <span class="work-process-card__number">03</span>
+            <div class="work-process-card__text">Менеджер с вами на связи 24/7.</div>
+          </div>
+        </div>
+      </li>
+      <li class="advantages__item">
+        <div class="work-process-card">
+          <div class="work-process-card__img">
+            <img src="images/content/advantages/4.jpg" alt="Расчет стоимости.">
+          </div>
+          <div class="work-process-card__info">
+            <span class="work-process-card__number">04</span>
+            <div class="work-process-card__text">16 лет на рынке. Большая наработанная база перевозчиков.</div>
+          </div>
+        </div>
+      </li>
+      <li class="advantages__item">
+        <div class="work-process-card">
+          <div class="work-process-card__img">
+            <img src="images/content/advantages/5.jpg" alt="Расчет стоимости.">
+          </div>
+          <div class="work-process-card__info">
+            <span class="work-process-card__number">05</span>
+            <div class="work-process-card__text">Быстрая организация поставок.</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="promo promo--with-text">
+  <div class="container">
+    <div class="promo__offer">
+      <h2 class="promo__title section-title">Выполняем грузоперевозки по всему миру</h2>
+
+      <div class="promo__text">
+        <p>Будь в курсе цен на международные перевозки 24/7! Калькулятор стоимости перевозки поможет оперативно
+          рассчитать цену доставки груза. Рассчитывай стоимость доставки от 100 кг до 22т online.</p>
+      </div>
+
+      <button class="promo__btn btn" type="button">Рассчитать стоимость</button>
+    </div>
+  </div>
+</section>
+      <section class="tasks tasks--profitable">
+  <div class="container">
+    <h2 class="tasks__title">Почему аутсорсинг с RateGo - это выгодно</h2>
+
+    <ul class="tasks__items">
+      <li class="tasks__item">
+        <article class="task-card task-card--without-intermediaries">
+          <h3 class="task-card__name">Без посредников</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--transparency">
+          <h3 class="task-card__name">Прозрачность</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--cost-calculator">
+          <h3 class="task-card__name">Калькулятор стоимости</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--actual-prices">
+          <h3 class="task-card__name">Актуальные цены</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--clock-control">
+          <h3 class="task-card__name">Контроль 24/7</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--responsibility">
+          <h3 class="task-card__name">Ответственность</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--better-conditions">
+          <h3 class="task-card__name">Лучшие условия</h3>
+          <div class="tak-card__text">
+            <p>Мы связываемся с отправителем и принимаем груз с его склада небольшим автомобилем.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--work-for-results">
+          <h3 class="task-card__name">Работа на результат</h3>
+          <div class="tak-card__text">
+            <p>Оформление AWB, страхование, контроль документов, таможенное оформление.</p>
+          </div>
+        </article>
+      </li>
+      <li class="tasks__item">
+        <article class="task-card task-card--help-from-specialists">
+          <h3 class="task-card__name">Помощь специалистов</h3>
+          <div class="tak-card__text">
+            <p>Предварительный букинг места в самолете и транспортировка в заданную страну.</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+      <section class="consultation">
+  <div class="container">
+    <div class="consultation__offer">
+      <h2 class="consultation__title section-title">Получите <span class="text-accent">бесплатную</span> консультацию
+      </h2>
+      <div class="consultation__text">
+        <p>Заполните форму, и мы свяжемся с Вами, чтобы рассказать подробнее об аутсорсинге с RateGo logistics.</p>
+      </div>
+
+      <form class="consultation__form form">
+        <label class="form__group">
+          <input class="form__input" type="text" placeholder="Ваше Имя" name="name" required>
+        </label>
+        <label class="form__group">
+          <input class="form__input" type="tel" placeholder="Ваше Телефон" name="tel" required>
+        </label>
+        <button class="consultation__btn btn" type="submit">Рассчитать стоимость</button>
+      </form>
+    </div>
+  </div>
+</section>
+      <section class="promo promo--no-bg">
+  <div class="container">
+    <div class="promo__offer">
+      <h2 class="promo__title section-title">Мы позаботимся о том, чтобы Вы получили лучшую цену на перевозку по прямым
+        контрактам с перевозчиками! </h2>
+
+      <button class="promo__btn btn" type="button">Рассчитать стоимость</button>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <a class="logo" href="#">
+        <img src="images/logo.svg" alt="Логотип">
+      </a>
+
+      <div class="footer__lists footer-menu">
+        <div class="footer-menu__col">
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">О нас</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Схема работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Вакансии</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Калькулятор</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials socials">
+            <p class="socials__text">Связаться с нами:</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--telegram" href="#" aria-label="Написать нам в телеграм"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--whatsapp" href="#" aria-label="Написать нам в уатсапп"></a>
+              </li>
+              <li class=" socials__item">
+                <a class="socials__link socials__link--facebook" href="#" aria-label="Написать нам в фэйсбук"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-menu__col">
+          <div class="footer-menu-box">
+            <ul class="footer-menu-box__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Услуги</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Авто</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Море</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Авиа</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Сборный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Мультимодальный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Негабаритный</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Экспедирование</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Таможня</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Склад</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">Аутсорсинг</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__contacts nav-contacts">
+          <h3 class="nav-contacts__title">Главный офис</h3>
+          <ul class="nav-contacts__list">
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--address" href="#"><span>ул. Десятинная 1/3, Киев 01001
+                  Украина</span>
+              </a>
+            </li>
+            <li class="nav-contacts__item">
+              <a class="nav-contacts__link nav-contacts__link--mail"
+                href="mailto:info@rate-and-go.com"><span>info@rate-and-go.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__question-box question-box">
+          <h3 class="question-box__title">Остались вопросы?</h3>
+          <div class="question-box__text">
+            Оставьте свои контакты, и мы свяжемся с вами в ближайшее время!
+          </div>
+          <button class="question-box__btn btn" type="button">Связаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container flex">
+      <div class="footer__text">
+        <p>© 2021 RateGO / All rights reserved</p>
+      </div>
+      <div class="footer__tools">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- select2 -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

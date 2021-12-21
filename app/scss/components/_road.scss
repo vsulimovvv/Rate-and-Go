@@ -1,6 +1,7 @@
 .road {
   color: var(--color-white);
   margin-bottom: 30px;
+  padding-bottom: 30px;
 
   @include breakpointsMaxW($bp-991) {
     display: none;
@@ -19,6 +20,8 @@
   &__item {
     max-width: 320px;
     width: 100%;
+    z-index: 10;
+    cursor: pointer;
 
     &:hover {
       .road__point {
@@ -38,7 +41,7 @@
   &__info {
     opacity: 0.6;
     transition: 500ms ease;
-    margin-bottom: 33px;
+    padding-bottom: 33px;
   }
 
   &__price {
@@ -87,9 +90,8 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
-  // border-bottom: 1px dashed #fff;
   height: 80px;
-  bottom: -30px;
+  bottom: 50px;
   position: absolute;
 
   @include breakpointsMaxW($bp-991) {
@@ -97,8 +99,8 @@
   }
 
   &__truck {
+    z-index: 11;
     display: block;
-    z-index: 1;
     position: absolute;
     left: -90px;
     top: 50%;

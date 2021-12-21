@@ -23,6 +23,10 @@
     }
   }
 
+  &__logo {
+    z-index: 12;
+  }
+
   &__contacts {
     @include breakpointsMaxW($bp-991) {
       .nav-contacts__link {
@@ -40,6 +44,10 @@
     font-weight: 400;
 
     margin-bottom: 23px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(15px + (23 - 15) * ((100vw - 320px) / (1215 - 320)));
+    }
   }
 
   &__bottom {
@@ -48,34 +56,7 @@
     align-items: center;
   }
 
-  &__signin {
-    display: block;
-    padding-left: 22px;
-    position: relative;
-
-    &::after {
-      @include pseudoElDefault();
-      width: 18px;
-      height: 20px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      @include maskImage(url('../images/icons/user.svg'), contain);
-      background-color: var(--color-white);
-    }
-
-    &:hover {
-      color: var(--color-accent);
-
-      &::after {
-        background-color: var(--color-accent);
-      }
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      width: 100%;
-    }
-  }
+  
 
   // * ==== Toglge Menu Btn
   &__toggle {
@@ -83,7 +64,7 @@
 
     @include breakpointsMaxW($bp-991) {
       display: block;
-      z-index: 10;
+      z-index: 12;
       flex-shrink: 0;
       width: 25px;
       height: 20px;
@@ -124,7 +105,6 @@
 
       &:hover {
         transform: scale(1.05);
-        // transform: rotate(15deg);
       }
 
       &.active {
@@ -145,25 +125,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes anim1 {
-  0% {
-    top: 0;
-  }
-
-  50% {
-    transform: translateX(-50%) rotate(45deg);
-  }
-}
-
-@keyframes anim2 {
-  0% {
-    bottom: 0;
-  }
-
-  50% {
-    transform: translateX(-50%) rotate(-45deg);
   }
 }

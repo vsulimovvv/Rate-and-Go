@@ -46,7 +46,6 @@ window.addEventListener('DOMContentLoaded', () => {
           spaceBetween: 100,
         }
       },
-
     });
   })();
 
@@ -64,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ==== Road Hero
-  (function line() {
+  (function road() {
     const navLine = document.querySelector('.route__truck');
     const navItem = document.querySelectorAll('.road__item');
 
@@ -80,7 +79,72 @@ window.addEventListener('DOMContentLoaded', () => {
         navLine.style.left = `-90px`;
       });
     });
-  })()
+  })();
+
+  // * ==== Modal
+  (function modals() {
+    function bindModal(openBtn, modal, close) {
+      const openBtnEl = document.querySelectorAll(openBtn);
+      const modalEl = document.querySelector(modal);
+      const closeEl = document.querySelectorAll(close);
+      const body = document.querySelector('body');
+
+      if (modalEl) {
+        openBtnEl.forEach(el => {
+          el.addEventListener('click', e => {
+
+            if (e.target) {
+              e.preventDefault()
+            }
+
+            modalEl.classList.add('active');
+            body.classList.add('no-scroll');
+          });
+        })
+
+        closeEl.forEach(btn => {
+          btn.addEventListener('click', e => {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          });
+        })
+
+        modalEl.addEventListener('click', e => {
+          if (e.target === modalEl) {
+            modalEl.classList.remove('active');
+            body.classList.remove('no-scroll');
+          }
+        })
+      };
+    };
+    bindModal('.header__signin', '.popup', '.popup__close');
+  }());
+
+  // * ==== SignIn|SignUp
+  (function signin() {
+    const cards = document.querySelectorAll('.card');
+    const btns = document.querySelectorAll('.js-btn');
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', on_btn_click, true);
+      btn.addEventListener('touch', on_btn_click, true);
+    });
+
+    function on_btn_click(e) {
+      const nextID = e.currentTarget.getAttribute('data-target');
+      const next = document.getElementById(nextID);
+      if (!next) return;
+      viewChange(next);
+      return false;
+    };
+
+    function viewChange(next) {
+      cards.forEach((card) => {
+        card.classList.remove('is-show');
+      });
+      next.classList.add('is-show');
+    };
+  })();
 
   window.addEventListener('scroll', scrollHeader);
 });

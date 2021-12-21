@@ -82,6 +82,7 @@
     display: block;
     padding-left: 27px;
     position: relative;
+    transition: 150ms ease;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -91,13 +92,22 @@
       @include pseudoElDefault();
       left: 0;
       top: 0;
+      transition: 150ms ease;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
     }
 
     &--location {
       &::after {
         width: 11px;
         height: 15px;
-        @include maskImage(url('../images/sprite.svg#location'), cover);
+        @include maskImage(url('../images/sprite.svg#location-icon'), cover);
         background-color: var(--color-dark);
       }
     }
@@ -105,10 +115,10 @@
     &--mail {
       &::after {
         width: 16px;
-        height: 11px;
+        height: 10px;
         top: 50%;
         transform: translateY(-50%);
-        @include maskImage(url('../images/sprite.svg#mail'), cover);
+        @include maskImage(url('../images/sprite.svg#mail-icon'), cover);
         background-color: var(--color-dark);
       }
     }

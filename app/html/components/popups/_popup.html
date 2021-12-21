@@ -1,0 +1,60 @@
+<div class="popup">
+  <div class="popup__container">
+    <div class="popup__wrap">
+      <div class="card card--welcome is-show" id="welcome">
+        <div class="card__body">
+          <h2 class="card__title">Добро пожалость</h2>
+          <p class="card__text">Выберите ниже, что вы хотите:</p>
+          <div class="btn-wrap">
+            <button class="card__btn btn btn-register js-btn" data-target="register">Регистрация</button>
+            <button class="card__btn btn btn-login js-btn" data-target="login">Войти</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--register" id="register">
+        <div class="card__body">
+          <h2 class="card__title">Создание аккаунта</h2>
+          <p class="card__text">Регистрация</p>
+
+          <form class="popup__form form">
+            <label class="form__group">
+              <input class="form__input" type="text" id="name" placeholder="Ваше Имя" name="name" required>
+            </label>
+            <label class="form__group">
+              <input class="form__input" type="tel" id="phone" placeholder="Ваше Телефон" name="tel" required>
+            </label>
+            <label class="form__group">
+              <input class="form__input" type="email" id="email" placeholder="Ваш email" name="email" required>
+            </label>
+            <label class="form__group">
+              <input class="form__input" type="password" id="passeod1" placeholder="Пароль" name="password" required>
+            </label>
+            <button class="form__btn btn" type="submit">Зарегистрироваться</button>
+          </form>
+
+          <button class="card__btn btn-back js-btn" data-target="welcome">Назад</button>
+        </div>
+      </div>
+
+      <div class="card card--login" id="login">
+        <div class="card__body">
+          <h2 class="card__title">Добро пожаловать</h2>
+          <p class="card__text">Войти</p>
+
+          <form class="popup__form form">
+            <label class="form__group">
+              <input class="form__input" type="text" id="name" placeholder="Ваше Имя" name="name" required>
+            </label>
+            <label class="form__group">
+              <input class="form__input" type="password" id="passeod1" placeholder="Пароль" name="password" required>
+            </label>
+            <button class="form__btn btn" type="submit">Войти</button>
+          </form>
+
+          <button class="card__btn btn-back js-btn" data-target="welcome">назад</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

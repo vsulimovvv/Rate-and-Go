@@ -107,8 +107,6 @@
 
   &__form {
     margin-bottom: 30px;
-
-    @include breakpointsMaxW($bp-768) {}
   }
 
   &__bottom {
@@ -118,6 +116,41 @@
 
     @include breakpointsMaxW($bp-991) {
       display: none;
+    }
+  }
+
+  &__more {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:hover {
+      a {
+        color: var(--color-accent);
+
+        &::after {
+          background-color: var(--color-accent);
+          right: -5px;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      transition: 150ms ease;
+      padding-right: 35px;
+
+      &::after {
+        @include pseudoElDefault();
+        width: 25px;
+        height: 10px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include maskImage(url('../images/sprite.svg#arrow-more'), cover);
+        background-color: var(--color-white);
+        transition: 150ms ease;
+      }
     }
   }
 }
